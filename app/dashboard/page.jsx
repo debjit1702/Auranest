@@ -1,11 +1,10 @@
-import { UserButton } from '@clerk/nextjs'
+import Listing from '@/components/ui/Listing'
 import React from 'react'
 
 function Dashboard() {
   return (
     <div>
-      Dashboard
-      <UserButton/>
+      <Listing/>
     </div>
   )
 }
