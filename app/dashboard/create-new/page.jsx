@@ -4,6 +4,7 @@ import React from "react";
 import ImageSelection from "../_components/ImageSelection";
 import RoomType from "./_component/RoomType";
 import DesignType from "./_component/DesignType";
+import Additionalreq from "./_component/Additionalreq";
 
 function CreateNew() {
   // Define the handler function
@@ -32,8 +33,10 @@ function CreateNew() {
           {/* Room type */}
           <RoomType selectedRoomType={(value)=> onHandleInputChange(value, "roomType")}/>
           {/* Design type */}
-          <DesignType/>
+          <DesignType SelectedDesignType={(value)=>onHandleInputChange(value, "designType" )}/>
           {/* Additional requierment */}
+
+          <Additionalreq/>
 
           {/* button to generate */}
         </div>
