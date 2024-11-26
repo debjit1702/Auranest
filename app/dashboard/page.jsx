@@ -1,4 +1,4 @@
-import Listing from '@/components/ui/Listing'
+import Listing from '@/app/dashboard/_components/Listing'
 import React from 'react'
 
 function Dashboard() {
