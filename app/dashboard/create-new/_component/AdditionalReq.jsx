@@ -1,13 +1,13 @@
 import { Textarea } from '@/components/ui/textarea'
 import React from 'react'
 
-function Additionalreq() {
+function AdditionalReq(additionalRequirmentInput) {
   return (
     <div className='mt-5'>
         <label className='text-gray-400'>Enter Additional Requirments</label>
-      <Textarea className="mt-2" onChange={(e)=>console.log(e.target.value)}/>
+      <Textarea className="mt-2" onChange={(e)=>additionalRequirmentInput(e.target.value)}/>
     </div>
   )
 }
 
-export default Additionalreq
+export default AdditionalReq

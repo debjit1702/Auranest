@@ -1,21 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ImageSelection from "../_components/ImageSelection";
 import RoomType from "./_component/RoomType";
 import DesignType from "./_component/DesignType";
-import Additionalreq from "./_component/Additionalreq";
+import AdditionalReq from "./_component/Additionalreq";
+import { Button } from "@/components/ui/button";
 
 function CreateNew() {
-  // Define the handler function
+
+  const [formData,setFormData]=useState([]);
+
   const onHandleInputChange =(value, fieldName) => {
-   
+   setFormData(pre)
   }
   
 
   return (
     <div>
-      <h2 className="font-bold text-4xl text-green-400 text-center">
+      <h2 className="font-bold text-4xl text-lime-500 text-center">
         Experience the magic of AI Remodeling
       </h2>
       <p className="text-center text-gray-500">
@@ -36,9 +39,11 @@ function CreateNew() {
           <DesignType SelectedDesignType={(value)=>onHandleInputChange(value, "designType" )}/>
           {/* Additional requierment */}
 
-          <Additionalreq/>
+          <AdditionalReq additionalRequirmentInput={(value)=>onHandleInputChange(value, "additionalReq")}/>
 
           {/* button to generate */}
+          <Button className="w-full mt-5 bg-lime-500">Generate</Button>
+          <p className="text-sm text-gray-400 mb-52">NOTE:1 Credit will use to redesign your room</p>
         </div>
       </div>
     </div>
