@@ -8,6 +8,7 @@ function DesignType() {
             image: '/modern.png',
             alt: 'modern'
         },
+        
         {
             name: 'Industrial',
             image: '/industrial.png',
