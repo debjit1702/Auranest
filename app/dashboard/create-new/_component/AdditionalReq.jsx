@@ -1,13 +1,16 @@
-import { Textarea } from '@/components/ui/textarea'
+import { Textarea } from '@/components/ui/textarea' 
 import React from 'react'
 
-function AdditionalReq(additionalRequirmentInput) {
+function AdditionalReq({ additionalRequirmentInput }) { // Destructure the prop here
   return (
     <div className='mt-5'>
-        <label className='text-gray-400'>Enter Additional Requirments</label>
-      <Textarea className="mt-2" onChange={(e)=>additionalRequirmentInput(e.target.value)}/>
+        <label className='text-gray-400'>Enter Additional Requirements</label>
+      <Textarea 
+        className="mt-2" 
+        onChange={(e) => additionalRequirmentInput(e.target.value)} // This now works properly
+      />
     </div>
   )
 }
 
-export default AdditionalReq
+export default AdditionalReq;

@@ -12,7 +12,15 @@ function CreateNew() {
   const [formData,setFormData]=useState([]);
 
   const onHandleInputChange =(value, fieldName) => {
-   setFormData(pre)
+   setFormData(prev=>({
+    ...prev,
+    [fieldName]:value
+   }))
+
+   console.log(formData);
+
+
+
   }
   
 
@@ -34,12 +42,13 @@ function CreateNew() {
         {/* Form input Section */}
         <div>
           {/* Room type */}
-          <RoomType selectedRoomType={(value)=> onHandleInputChange(value, "roomType")}/>
+          <RoomType selectedRoomType={(value) => onHandleInputChange(value, "roomType")} />
           {/* Design type */}
-          <DesignType SelectedDesignType={(value)=>onHandleInputChange(value, "designType" )}/>
+          <DesignType selectedDesignType={(value) => onHandleInputChange(value, "designType")}/>
+
           {/* Additional requierment */}
 
-          <AdditionalReq additionalRequirmentInput={(value)=>onHandleInputChange(value, "additionalReq")}/>
+          <AdditionalReq additionalRequirmentInput={(value) => onHandleInputChange(value, "additionalReq")} />
 
           {/* button to generate */}
           <Button className="w-full mt-5 bg-lime-500">Generate</Button>
