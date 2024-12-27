@@ -31,9 +31,13 @@ function CreateNew() {
       // Log the URL to the console for verification
       console.log('Raw Image URL:', rawImageUrl);
   
-      // Commenting out the API call for testing
-      //const result = await axios.post('/api/redesign-room', { ...formData, rawImageUrl });
-      //console.log('AI Redesign Result:', result);
+      // The API call for testing
+      const result = await axios.post('/api/redesign-room', { 
+        imageUrl: rawImageUrl,
+        roomType: formData?.roomType,
+        designType: formData?.designType,
+        additionalReq: formData?.additionalReq,});
+      console.log('AI Redesign Result:', result);
   
     } catch (error) {
       console.error('Error generating AI image:', error);
